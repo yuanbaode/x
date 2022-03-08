@@ -1,8 +1,5 @@
 package server
 
-type  Config struct {
-
+type Config struct {
+	Host string
 }
-
-
-

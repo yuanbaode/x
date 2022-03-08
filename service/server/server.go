@@ -5,11 +5,14 @@ import (
 )
 
 type Server struct {
+	Config Config
 }
 
 func NewServer(config Config) *Server {
-	return &Server{}
-}
+	return &Server{
+		Config: config,
+
+	}}
 
 func (s *Server) Start() (err error) {
 	//serveMux := http.NewServeMux()
@@ -17,7 +20,6 @@ func (s *Server) Start() (err error) {
 	//http.ListenAndServe("0.0.0.0:8081",serveMux)
 
 	r := gin.Default()
-	r.GET("/file", serverFile("/file"))
-	r.StaticFS("/d", gin.Dir("./",true))
-	return r.Run("0.0.0.0:8081")
+	r.StaticFS("/", gin.Dir("./",true))
+	return r.Run(s.Config.Host)
 }
