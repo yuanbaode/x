@@ -926,7 +926,7 @@ type Config struct {
 }
 
 // NewConfig create a new code config
-func NewConfig(templateLoader TemplateLoader, model string ) *Config {
+func NewConfig(templateLoader TemplateLoader, model string) *Config {
 	conf := &Config{
 		Swagger: &SwaggerInfoDetails{
 			Version:      "1.0",
@@ -952,7 +952,7 @@ func NewConfig(templateLoader TemplateLoader, model string ) *Config {
 
 	outDir := "."
 	module := "github.com/alexj212/test"
-	modelPackageName := "model"
+	modelPackageName := "po"
 	daoPackageName := "dao"
 	apiPackageName := "api"
 
@@ -994,6 +994,7 @@ func NewConfig(templateLoader TemplateLoader, model string ) *Config {
 	} else {
 		conf.Swagger.Host = fmt.Sprintf("%s:%d", conf.ServerHost, conf.ServerPort)
 	}
+	conf.SQLType = "mysql"
 
 	return conf
 }

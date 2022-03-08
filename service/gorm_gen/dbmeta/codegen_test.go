@@ -62,12 +62,12 @@ func TestConfig_CreateContextForTableFile(t *testing.T) {
 		Instance:        nil,
 		CodeFields:      nil,
 	}
-	r:=c.CreateContextForTableFile(&m)
+	r := c.CreateContextForTableFile(&m)
 	fmt.Println(r)
 
 }
 
-func Test_Replace(t *testing.T)  {
-	a:=Replace("{{FmtFieldName (stringifyFirstChar .) }}","id")
+func Test_Replace(t *testing.T) {
+	a := Replace("{{FmtFieldName (stringifyFirstChar .) }}", "id")
 	fmt.Println(a)
 }

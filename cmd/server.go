@@ -1,10 +1,8 @@
 package cmd
 
-
-
 import (
-	"fmt"
 	"github.com/spf13/cobra"
+	"github.com/yuanbaode/x/service/server"
 	"log"
 )
 
@@ -29,6 +27,11 @@ func init() {
 }
 
 func serve(cmd *cobra.Command, args []string) {
-	log.Println("server run ")
-	fmt.Println(args)
+	cfg := server.Config{
+
+	}
+	err := server.NewServer(cfg).Start()
+	if err != nil {
+		log.Fatal(err)
+	}
 }

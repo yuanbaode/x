@@ -5,6 +5,7 @@ go 1.16
 require (
 	github.com/bxcodec/faker/v3 v3.7.0
 	github.com/davecgh/go-spew v1.1.1
+	github.com/gin-gonic/gin v1.7.7
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/gobuffalo/packr/v2 v2.8.3
 	github.com/iancoleman/strcase v0.2.0
