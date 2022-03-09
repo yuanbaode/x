@@ -14,7 +14,6 @@ require (
 	github.com/logrusorgru/aurora v2.0.3+incompatible
 	github.com/ompluscator/dynamic-struct v1.3.0
 	github.com/serenize/snaker v0.0.0-20201027110005-a7ad2135616e
-	github.com/smallnest/gen v0.9.29
 	github.com/spf13/cobra v1.3.0
 	golang.org/x/tools v0.1.7
 )

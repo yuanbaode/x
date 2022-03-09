@@ -5,10 +5,10 @@ import (
 	"encoding/csv"
 	"encoding/json"
 	"fmt"
+	"github.com/yuanbaode/x/service/gorm_gen/utils"
 	"path"
 	"time"
 
-	"github.com/smallnest/gen/utils"
 
 	"go/format"
 	"io/ioutil"
